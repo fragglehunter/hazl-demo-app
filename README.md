@@ -17,7 +17,7 @@ This repository provides a simple example of deploying a demo application across
 * A Kubernetes cluster with nodes labeled by zone:
 
   ```
-  kubectl get nodes --show-labels | grep topology.kubernetes.io/zone
+  kubectl get nodes --label-columns=topology.kubernetes.io/zone
   ```
 * `kubectl` configured to access the cluster.
 * `sed`, `bash`, and GNU utils installed locally.
