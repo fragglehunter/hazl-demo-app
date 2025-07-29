@@ -52,6 +52,17 @@ This repository provides a simple example of deploying a demo application across
    kubectl apply -f manifest/
    ```
 
+4. **Verify**
+   Exec into a pod and run a curl:
+
+   ```bash
+   kubectl -n demo-app exec -it $(kubectl get pods -n demo-app -l app=frontend -o jsonpath='{.items[0].metadata.name}') -c netshoot -- bash
+   ```
+
+   ```bash
+   while true; do curl -s http://api-service | jq .payload; done
+   ```
+
 ## What This Does
 
 * Each **backend** pod will:
