@@ -1,7 +1,3 @@
-Here’s a clear and concise `README.md` you can include with your repo to explain how to use the contents:
-
----
-
 # Multi-Zone Demo App Deployment
 
 This repository provides a simple example of deploying a demo application across multiple Kubernetes zones. It uses template-based deployment manifests for a backend and frontend, scoped to specific zones via node affinity and naming conventions.
@@ -71,8 +67,4 @@ This repository provides a simple example of deploying a demo application across
 
 * The namespace is automatically annotated for Linkerd injection.
 * Make sure your Kubernetes nodes are correctly labeled with the appropriate zone values for scheduling to succeed.
-
----
-
-Let me know if you want a version with usage screenshots, a diagram, or if you’d like to convert this into a slide or wiki page format.
 
