@@ -35,7 +35,7 @@ spec:
             memory: 100Mi
       - name: netshoot
         image: nicolaka/netshoot:latest
-        command: ["/bin/sh", "-c", "while true; do ping localhost; done"]
+        command: ["/bin/sh", "-c", "while true; do ping -c 1 localhost; sleep 604800; done"]
         ports:
         - containerPort: 80
       affinity:
